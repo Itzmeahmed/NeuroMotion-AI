@@ -1,0 +1,43 @@
+.tech-stack-section {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(0deg, var(--bg-primary) 0%, rgba(15, 23, 42, 0.5) 50%, var(--bg-primary) 100%);
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tech-badge:hover {
+  transform: translateY(-5px);
+  border-bottom-color: var(--accent-neon);
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.tech-category {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.tech-name {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--text-primary);
+}

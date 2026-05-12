@@ -1,0 +1,155 @@
+.analysis-section {
+  position: relative;
+  z-index: 10;
+}
+
+.analysis-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.analysis-tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.tab {
+  flex: 1;
+  padding: 1.5rem;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: var(--accent-neon);
+  border-bottom: 2px solid var(--accent-neon);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.tab:hover:not(.active) {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.recording-area {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  justify-content: center;
+}
+
+.record-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.record-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+.record-btn.recording {
+  border-color: #ff5f56;
+  box-shadow: 0 0 30px rgba(255, 95, 86, 0.5);
+  animation: pulse-glow 1.5s infinite alternate;
+}
+
+.record-status {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.live-waveform {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 50px;
+}
+
+.live-bar {
+  width: 4px;
+  background: var(--accent-neon);
+  border-radius: 2px;
+  animation: draw-waveform 0.8s ease-in-out infinite;
+}
+
+.audio-ready {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.play-btn {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.static-waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+  flex: 1;
+}
+
+.static-bar {
+  flex: 1;
+  background: var(--accent-blue);
+  border-radius: 2px;
+  min-height: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+}
